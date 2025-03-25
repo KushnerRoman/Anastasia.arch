@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Architecture Portfolio by Anastasia - Showcasing professional, internship, and academic projects">
+  <title>Anastasia | Architecture Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- StPageFlip CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/page-flip/dist/css/page-flip.min.css"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="responsive-styles.css">
+</head>
+<body>
+  <!-- Loading Indicator -->
+  <div id="loading-indicator">
+    <div class="spinner"></div>
+    <p>Loading Portfolio...</p>
+  </div>
+
+  <!-- Mobile Menu Toggle Button -->
+  <button id="mobile-menu-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+    <div class="hamburger-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </button>
+
+  <div class="main-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>Anastasia</h2>
+        <p>Architect & Designer</p>
+      </div>
+      
+      <nav class="categories">
+        <ul id="category-menu">
+          <li data-page="0" class="active">Cover</li>
+          <li data-page="4">Content</li>
+          
+          <h3>Professional</h3>
+          <li data-page="6">Sruji House</li>
+          <li data-page="15">Nina Factory</li>
+          <li data-page="25">Revivo House</li>
+          
+          <h3>Internship</h3>
+          <li data-page="33">Lagenda</li>
+          <li data-page="37">24 Housing Units</li>
+          
+          <h3>Academic</h3>
+          <li data-page="41">In_Du_City</li>
+          <li data-page="53">Culture Envelope</li>
+          <li data-page="59">Urban Bridge</li>
+        </ul>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <p>&copy; 2025 Anastasia</p>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Book Wrapper -->
+    <main class="book-wrapper">
+      <div id="flipbook" class="flip-book" aria-label="Portfolio book"></div>
+    </main>
+    
+    <!-- Navigation Controls -->
+    <div class="prev-button-container">
+      <button id="prev-btn" class="control-button" onclick="flipBook.flipPrev()" aria-label="Previous page">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    </div>
+    
+    <div class="next-button-container">
+      <button id="next-btn" class="control-button" onclick="flipBook.flipNext()" aria-label="Next page">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- StPageFlip JS -->
+  <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

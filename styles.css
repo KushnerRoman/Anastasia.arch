@@ -1,0 +1,443 @@
+/* Base styles */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #ecf0f1;
+  --accent-color: #3498db;
+  --text-color: #333;
+  --sidebar-width: 220px;
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+  background-color: #f8f9fa;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  color: var(--text-color);
+}
+
+/* Main layout */
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Book container */
+.book-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  overflow: hidden;
+  user-select: none;
+  margin-left: var(--sidebar-width);
+  transition: margin var(--transition-speed) ease;
+}
+
+.flip-book {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: none;
+  background-size: cover;
+  user-select: none;
+  touch-action: none;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+/* Loading indicator */
+#loading-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: var(--accent-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Page styles */
+.page {
+  padding: 0;
+  background-color: white;
+  color: var(--text-color);
+  border: solid 1px #e0e0e0;
+  overflow: hidden;
+  position: relative;
+}
+
+.page-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+
+.placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+}
+
+.page.--left {
+  border-right: 0;
+  box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.2);
+}
+
+.page.--right {
+  border-left: 0;
+  box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar navigation */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    overflow: hidden; /* Change from overflow-y: auto to overflow: hidden */
+    transition: transform var(--transition-speed) ease;
+  }
+
+.logo {
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.logo h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+  color: var(--secondary-color);
+}
+
+.categories {
+    flex-grow: 1;
+    overflow-y: auto; /* Keep this as auto */
+    margin-right: -17px; /* Hide scrollbar by pushing it outside the container */
+    padding-right: 17px; /* Add padding to compensate for the hidden scrollbar */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .categories::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  #category-menu li {
+    scroll-behavior: auto;
+  }
+  
+
+.categories h3 {
+  margin: 25px 0 15px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#category-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#category-menu li {
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+#category-menu li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+#category-menu li.active {
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: 500;
+}
+
+#category-menu li.active::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid var(--accent-color);
+}
+
+/* Navigation Controls */
+.prev-button-container,
+.next-button-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 90;
+  pointer-events: none; /* Allow clicks to pass through the container */
+  display: flex;
+  align-items: center;
+}
+
+.prev-button-container {
+  left: var(--sidebar-width);
+  right: 50%;
+  transition: left var(--transition-speed) ease;
+}
+
+.next-button-container {
+  left: 50%;
+  right: 0;
+}
+
+.control-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(44, 62, 80, 0.7);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  pointer-events: auto; /* Re-enable pointer events for buttons */
+  z-index: 95;
+}
+
+#prev-btn {
+  margin-left: 50px;
+}
+
+#next-btn {
+  margin-right: 50px;
+  margin-left: auto; /* Push to the right within its container */
+}
+
+.control-button:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.control-button:active {
+  transform: scale(1);
+}
+
+/* Responsive Design */
+#mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 110;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-icon {
+  position: relative;
+  width: 20px;
+  height: 16px;
+}
+
+.hamburger-icon span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  border-radius: 1px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger-icon span:nth-child(2) {
+  top: 7px;
+}
+
+.hamburger-icon span:nth-child(3) {
+  top: 14px;
+}
+
+#mobile-menu-toggle[aria-expanded="true"] .hamburger-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#mobile-menu-toggle[aria-expanded="true"] .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+#mobile-menu-toggle[aria-expanded="true"] .hamburger-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* StPageFlip Customization */
+.stf__wrapper,
+.stf__block {
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.stf__block {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.stf__wrapper {
+  perspective: none !important;
+}
+
+.stf__page {
+  background: none !important;
+}
+
+/* Media Queries */
+/* Media Queries */
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: 0px;
+  }
+
+  #mobile-menu-toggle {
+    display: flex;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    width: 250px;
+  }
+
+  .sidebar.sidebar-visible {
+    transform: translateX(0);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .book-wrapper {
+    margin-left: 0;
+    padding-top: 60px;
+  }
+  
+  .prev-button-container {
+    left: 0;
+  }
+  
+  .control-button {
+    width: 36px;
+    height: 36px;
+  }
+  
+  #prev-btn {
+    margin-left: 20px;
+  }
+  
+  #next-btn {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .control-button {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .control-button i {
+    font-size: 14px;
+  }
+  
+  #prev-btn {
+    margin-left: 10px;
+  }
+  
+  #next-btn {
+    margin-right: 10px;
+  }
+}
+
+/* Print Styles - prevent bad printing */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .stf__parent, .stf__parent * {
+    visibility: visible;
+  }
+  .stf__parent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
