@@ -127,71 +127,71 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Portfolio pages - keeping your current URL structure
   const pageUrls = [
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860639/0_kr9tns.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743050307/PORTFOLIO_02_vaqfhk.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743050307/PORTFOLIO_03_ynmtvz.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743050307/PORTFOLIO_04_ufuckj.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743050307/PORTFOLIO_04_ufuckj.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860639/06_rq3jsd.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860640/07_twfrpl.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860640/08_xbg24u.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860640/09_h8mkak.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860641/010_hkpy2r.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860641/011_rjpryx.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860642/012_rt5k0z.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860641/013_kbyepr.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860642/014_w9m9wv.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860641/015_de4ijt.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860642/016_cedjof.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860642/017_n7fvhw.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860642/018_t3308s.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860643/019_c9tedq.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860644/020_gabu2h.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860643/021_jkqpre.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860643/022_vcsee9.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860644/023_cacnxc.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860644/024_tjcebs.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860647/025_yo5jqe.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860647/026_ziwfxl.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860646/027_rjckvz.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860647/028_czdwwj.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860647/029_fobrjl.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860647/030_qm9huq.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860648/031_zr2ume.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860648/032_lkufrq.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860648/033_qmyz1c.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860648/034_ne0r7z.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860649/035_k57x4q.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743050433/PORTFOLIO_036_yhvebs.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743050433/PORTFOLIO_037_ftzr9b.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860652/038_xxuaqi.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860652/039_lr0cs8.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743050433/PORTFOLIO_040_m3ovyr.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743050432/PORTFOLIO_041_adifum.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860653/042_v5kdfo.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860653/043_tvuv1e.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860653/044_googyq.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860654/045_amxqjt.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860654/046_fhx4gg.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860658/047_uyr5sz.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860657/048_srbwty.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860657/049_hozoug.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860657/050_wrqqhr.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860658/051_cwhzmw.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860658/052_pvwhkx.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860658/053_vgfvol.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860659/054_v7gg4q.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860659/055_qxdbe0.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860660/056_t8z1zc.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860660/057_smywnn.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860662/058_mrieet.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860663/059_gwavts.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860663/060_xixt6x.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860663/061_zgrvuy.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860664/062_km8xdr.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860664/063_e5duns.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860664/064_vooptf.jpg",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860639/065_prrron.jpg",
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056360/0_wg6qg1.jpg", // page 0
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056361/02_zpcvfb.jpg", // page 2
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056363/03_v2ab8k.jpg", // page 3
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056359/04_oqcwxg.jpg", // page 4
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056358/05_bhj7mk.jpg", // page 5
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056367/06_lqsi7z.jpg", // page 6
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056368/07_qhlql4.jpg", // page 7
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056384/08_wvl2jq.jpg", // page 8
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056376/09_eugdyg.jpg", // page 9
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056377/010_p27n5z.jpg", // page 10
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056378/011_oc3l1k.jpg", // page 11
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056388/012_qas40s.jpg", // page 12
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056381/013_abqqgh.jpg", // page 13
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056383/014_ia8qyy.jpg", // page 14
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056375/015_itrdrx.jpg", // page 15
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056367/016_gaep2i.jpg", // page 16
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056366/017_smngre.jpg", // page 17
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056384/018_nismfa.jpg", // page 18
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056386/019_vhd5xw.jpg", // page 19
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056380/020_gfb3wn.jpg", // page 20
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056379/021_n6cqcd.jpg", // page 21
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056387/022_yfq0mh.jpg", // page 22
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056374/023_h5cgol.jpg", // page 23
+    "https://res.cloudinary.com/dg0nkctc/image/upload/v1743056370/024_ikdc5t.jpg", // page 24
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056385/025_x6jprw.jpg", // page 25
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056372/026_kaj2je.jpg", // page 26
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056373/027_ghjtf0.jpg", // page 27
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056382/028_slg6xy.jpg", // page 28
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056388/029_cw4pfj.jpg", // page 29
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056390/030_xgruhl.jpg", // page 30
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056391/031_vieedm.jpg", // page 31
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056392/032_s0kpkg.jpg", // page 32
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056392/033_lnmbzv.jpg", // page 33
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056393/034_h0wif6.jpg", // page 34
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056394/035_wlvysm.jpg", // page 35
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056396/036_zglrb7.jpg", // page 36
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056397/037_ph7rjh.jpg", // page 37
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056397/038_unamhr.jpg", // page 38
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056397/039_qbpsgh.jpg", // page 39
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056398/040_fohr6q.jpg", // page 40
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056401/041_ywzsf7.jpg", // page 41
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056401/042_titiyt.jpg", // page 42
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056401/043_anpukx.jpg", // page 43
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056403/044_idkjos.jpg", // page 44
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056404/045_ycoa9s.jpg", // page 45
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056354/046_wqliqo.jpg", // page 46
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056362/047_dabgp9.jpg", // page 47
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056361/048_d9lqcu.jpg", // page 48
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056364/049_rtwrdf.jpg", // page 49
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056356/050_yji71t.jpg", // page 50
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056370/051_glynov.jpg", // page 51
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056356/052_dwwbxr.jpg", // page 52
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056357/053_sjyngz.jpg", // page 53
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056355/054_yemggz.jpg", // page 54
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056357/055_pyc4pn.jpg", // page 55
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056371/056_vc5dpz.jpg", // page 56
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056365/057_ba5mti.jpg", // page 57
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056379/058_h6udxe.jpg", // page 58
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056363/059_bg8qqk.jpg", // page 59
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056358/060_nd3mta.jpg", // page 60
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056357/061_ngoqoo.jpg", // page 61
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056374/062_fcwsop.jpg", // page 62
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056370/063_zjfpiq.jpg", // page 63
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056367/064_dickgo.jpg", // page 64
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056362/065_v5qnke.jpg" // page 65
     ];
 
   // Create array of page data with only the first few pages preloaded
