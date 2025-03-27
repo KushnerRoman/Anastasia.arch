@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056360/0_wg6qg1.jpg", // page 0
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056361/02_zpcvfb.jpg", // page 2
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056363/03_v2ab8k.jpg", // page 3
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056359/04_oqcwxg.jpg", // page 4
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743058381/04_zlabex.jpg", // page 4
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056358/05_bhj7mk.jpg", // page 5
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056367/06_lqsi7z.jpg", // page 6
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056368/07_qhlql4.jpg", // page 7
@@ -160,11 +160,11 @@ document.addEventListener("DOMContentLoaded", () => {
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056391/031_vieedm.jpg", // page 31
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056392/032_s0kpkg.jpg", // page 32
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056392/033_lnmbzv.jpg", // page 33
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056393/034_h0wif6.jpg", // page 34
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743058380/034_k9rhf3.jpg", // page 34
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056394/035_wlvysm.jpg", // page 35
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056396/036_zglrb7.jpg", // page 36
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056397/037_ph7rjh.jpg", // page 37
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056397/038_unamhr.jpg", // page 38
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743058381/038_osgzth.jpg", // page 38
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056397/039_qbpsgh.jpg", // page 39
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056398/040_fohr6q.jpg", // page 40
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056401/041_ywzsf7.jpg", // page 41
