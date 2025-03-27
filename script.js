@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Portfolio pages - keeping your current URL structure
   const pageUrls = [
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1742860639/0_kr9tns.jpg",
-    "hhttps://res.cloudinary.com/dgq0nkctc/image/upload/v1743050307/PORTFOLIO_02_vaqfhk.jpg",
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743050307/PORTFOLIO_02_vaqfhk.jpg",
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743050307/PORTFOLIO_03_ynmtvz.jpg",
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743050307/PORTFOLIO_04_ufuckj.jpg",
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743050307/PORTFOLIO_04_ufuckj.jpg",
