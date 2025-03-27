@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056379/021_n6cqcd.jpg", // page 21
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056387/022_yfq0mh.jpg", // page 22
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056374/023_h5cgol.jpg", // page 23
-    "https://res.cloudinary.com/dg0nkctc/image/upload/v1743056370/024_ikdc5t.jpg", // page 24
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056946/024_vl019b.jpg", // page 24
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056385/025_x6jprw.jpg", // page 25
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056372/026_kaj2je.jpg", // page 26
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743056373/027_ghjtf0.jpg", // page 27
