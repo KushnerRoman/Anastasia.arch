@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize the page flip book
   flipBook = new St.PageFlip(container, {
-    width: 700,
-    height: 1000,
+    width: 1000,
+    height: 1400,
     size: "fixed",
     minWidth: 300,
     maxWidth: 1200,
@@ -371,7 +371,8 @@ function loadPage(pageIndex) {
 
 // Adjust book size based on viewport
 function adjustBookSize() {
-  const container = document.querySelector('.book-wrapper');
+  const container = document.querySelector('.book-container');
+  const bookWrapper = document.querySelector('.book-wrapper');
   const sidebar = document.querySelector('.sidebar');
   
   if (container && flipBook) {
@@ -390,7 +391,7 @@ function adjustBookSize() {
     }
     
     // Calculate appropriate dimensions while maintaining aspect ratio
-    const bookAspectRatio = 700 / 1000; // original width/height
+    const bookAspectRatio = 2480  / 3508; // original width/height
     
     // Calculate max dimensions that fit in the container
     const maxWidth = containerWidth * 0.9;
