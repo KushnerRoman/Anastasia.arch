@@ -11,9 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Hide loading indicator immediately
   const loadingIndicator = document.getElementById("loading-indicator");
   if (loadingIndicator) {
-    loadingIndicator.style.display = 'none';
+    // Keep the loading indicator visible for 4 seconds
+    setTimeout(() => {
+      loadingIndicator.style.opacity = '0';
+      setTimeout(() => {
+        loadingIndicator.style.display = 'none';
+      }, 500); // Additional time for fade-out transition
+    }, 4000);
   }
-  
   const container = document.getElementById("flipbook");
   
   // Prevent default touch behaviors
@@ -287,6 +292,17 @@ async function initializeBook() {
     console.error('Error initializing book:', error);
   }
 }
+function getOptimalScale() {
+  // Base scale - adjust higher for better quality
+  let baseScale = 2.0; // Higher value = better quality
+  
+  // Check if device is high-DPI (like Retina display)
+  if (window.devicePixelRatio && window.devicePixelRatio > 1) {
+    baseScale *= window.devicePixelRatio;
+  }
+  
+  return baseScale;
+}
 
 // Render a single PDF page without showing loading
 async function renderPage(globalPageNumber) {
@@ -323,34 +339,57 @@ async function renderPage(globalPageNumber) {
     
     // Create canvas element
     const canvas = document.createElement('canvas');
-    const context = canvas.getContext('2d');
+    canvas.setAttribute('data-high-quality', 'true');
+    const context = canvas.getContext('2d', { alpha: false });
     
     // Get viewport and scale
-    const viewport = page.getViewport({ scale: 1 });
+    const viewport = page.getViewport({ scale: 1.0 });
     
     // Calculate scale to fit
-    const pageWidth = Math.min(700, window.innerWidth * 0.8);
-    const pageHeight = Math.min(1000, window.innerHeight * 0.8);
+    const pageWidth = pageElement.clientWidth || 700;
+    const pageHeight = pageElement.clientHeight || 1000;
     
     const scaleX = pageWidth / viewport.width;
     const scaleY = pageHeight / viewport.height;
-    const scale = Math.min(scaleX, scaleY) * 0.98;
     
-    const scaledViewport = page.getViewport({ scale });
+    // Use the larger scale to fill the page (but not too large to cause clipping)
+    const scale = Math.max(scaleX, scaleY) * 0.98;
     
-    // Set dimensions
+    // Apply quality multiplier for higher resolution rendering
+    const qualityMultiplier = getOptimalScale();
+    const renderScale = scale * qualityMultiplier;
+    
+    // Create high-resolution viewport
+    const scaledViewport = page.getViewport({ scale: renderScale });
+    
+    // Set canvas dimensions to the high-resolution size
     canvas.width = scaledViewport.width;
     canvas.height = scaledViewport.height;
     
-    // Add to page
+    // Make canvas width match page width to ensure proper centering at all zoom levels
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.style.display = 'block';
+    
+    // Position canvas in the page
+    pageElement.style.overflow = 'hidden';
+    pageElement.style.display = 'flex';
+    pageElement.style.justifyContent = 'center';
+    pageElement.style.alignItems = 'center';
+    pageElement.innerHTML = '';
     pageElement.appendChild(canvas);
-    canvas.style.margin = 'auto';
+    
+    // High-quality rendering options
+    const renderContext = {
+      canvasContext: context,
+      viewport: scaledViewport,
+      enableWebGL: true,
+      renderInteractiveForms: false,
+      intent: 'display'
+    };
     
     // Render PDF page
-    await page.render({
-      canvasContext: context,
-      viewport: scaledViewport
-    }).promise;
+    await page.render(renderContext).promise;
     
     return true;
   } catch (error) {
