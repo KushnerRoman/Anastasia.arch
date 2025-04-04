@@ -55,7 +55,7 @@
           <li data-page="3">Content</li>
           
           <h3>Professional</h3>
-          <li data-page="6">Sruji House</li>
+          <li data-page="5">Sruji House</li>
           <li data-page="15">Nina Factory</li>
           <li data-page="25">Revivo House</li>
           
@@ -66,16 +66,13 @@
           <h3>Academic</h3>
           <li data-page="41">In_Du_City</li>
           <li>
-
             <a href="https://architectureprize.azrielifoundation.org/en/projects/in-du-city-rethinking-the-industrial-city-production-as-part-of-urban-life-2/" target="_blank" style="text-decoration: none; color: inherit;"> In_Du_City - Link</a>
-
           </li>
           
           <li data-page="53">Cultural Envelope</li>
           <li>
             <a href="https://www.inspireli.com/en/awards/detail/646%20" target="_blank" style="text-decoration: none; color: inherit;"> Cultural Envelope - Link</a>
-            
-            </li>
+          </li>
           <li data-page="59">Urban Bridge</li>
         </ul>
       </nav>
@@ -85,28 +82,26 @@
         <div class="social-links">
           <a href="https://www.linkedin.com/in/anastasia-pokalchuk-ba481b31b/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
           <a href="https://www.instagram.com/anastasia_pk91?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw== " target="_blank"  aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          
         </div>
       </div>
     </aside>
 
     <!-- Book Wrapper -->
     <main class="book-wrapper">
-      <div class="book-container">
+      <div class="book-container-wrapper">
         <div id="flipbook" class="flip-book" aria-label="Portfolio book"></div>
-        
       </div>
     </main>
     
     <!-- Navigation Controls -->
     <div class="prev-button-container">
-      <button id="prev-btn" class="control-button" onclick="flipBook.flipPrev()" aria-label="Previous page">
+      <button id="prev-btn" class="control-button" aria-label="Previous page">
         <i class="fas fa-chevron-left"></i>
       </button>
     </div>
     
     <div class="next-button-container">
-      <button id="next-btn" class="control-button" onclick="flipBook.flipNext()" aria-label="Next page">
+      <button id="next-btn" class="control-button" aria-label="Next page">
         <i class="fas fa-chevron-right"></i>
       </button>
     </div>
@@ -114,6 +109,13 @@
 
   <!-- StPageFlip JS -->
   <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+
+  <!-- Add PDF.js libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    // Set the workerSrc property to allow PDF.js to find its worker script
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  </script>
 
   <!-- Custom JS -->
   <script src="script.js"></script>

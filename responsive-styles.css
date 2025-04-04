@@ -208,3 +208,25 @@
       border-width: 3px; /* Thinner spinner for sharper appearance */
     }
   }
+
+/* Add to responsive-styles.css */
+@media (min-width: 1920px) {
+  .book-container-wrapper {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .book-container-wrapper {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-container-wrapper {
+    width: 95%;
+    height: 95%;
+  }
+}
