@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743729673/PORTFOLIO_030_22_dzpii2.pdf",
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743729684/PORTFOLIO_030_23_m0vih4.pdf",
     "https://res.cloudinary.com/dg0nkctc/image/upload/v1743729678/PORTFOLIO_030_24_qmyqkl.pdf",
-    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743729671/PORTFOLIO_030_ 25_x2lbr5.pdf",
+    "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743729671/PORTFOLIO_030_25_x2lbr5.pdf",
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743729695/PORTFOLIO_030_26_ysotxp.pdf",
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743729685/PORTFOLIO_030_27_wassgy.pdf",
     "https://res.cloudinary.com/dgq0nkctc/image/upload/v1743729679/PORTFOLIO_030_28_ujminq.pdf",
